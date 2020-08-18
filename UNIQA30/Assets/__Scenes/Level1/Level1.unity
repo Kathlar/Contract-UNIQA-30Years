@@ -1114,34 +1114,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 136884351, guid: c54758a19c1f72542bf1d912c62ad52c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 841355346, guid: c54758a19c1f72542bf1d912c62ad52c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1488655248, guid: c54758a19c1f72542bf1d912c62ad52c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1575194554, guid: c54758a19c1f72542bf1d912c62ad52c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1814298012, guid: c54758a19c1f72542bf1d912c62ad52c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1925714793, guid: c54758a19c1f72542bf1d912c62ad52c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2101319844, guid: c54758a19c1f72542bf1d912c62ad52c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 352739205071340474, guid: c54758a19c1f72542bf1d912c62ad52c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1201,11 +1173,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: _GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8914919557795093676, guid: c54758a19c1f72542bf1d912c62ad52c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c54758a19c1f72542bf1d912c62ad52c, type: 3}

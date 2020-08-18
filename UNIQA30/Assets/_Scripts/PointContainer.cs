@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PointContainer : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public AudioSource audioSource { get; private set; }
 
     public int pointsCount = 10;
 

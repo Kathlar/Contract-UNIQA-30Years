@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 136884352}
   - component: {fileID: 136884354}
   - component: {fileID: 136884353}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 841355350}
   - component: {fileID: 841355349}
   - component: {fileID: 841355348}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 1488655252}
   - component: {fileID: 1488655251}
   - component: {fileID: 1488655250}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PointsCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 1575194555}
   - component: {fileID: 1575194557}
   - component: {fileID: 1575194556}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 1814298015}
   - component: {fileID: 1814298014}
   - component: {fileID: 1814298013}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1113,7 +1113,7 @@ GameObject:
   - component: {fileID: 1925714794}
   - component: {fileID: 1925714796}
   - component: {fileID: 1925714795}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1269,7 +1269,7 @@ GameObject:
   - component: {fileID: 2101319847}
   - component: {fileID: 2101319846}
   - component: {fileID: 2101319845}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1412,7 +1412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 352739205071340474}
   - component: {fileID: 1361079174062834368}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: _GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}

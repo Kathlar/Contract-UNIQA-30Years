@@ -46,9 +46,12 @@ public class PlayerController : MonoBehaviour
         lost = true;
         GameManager.SaveScore(points.numberOfPoints);
         GameManager.Lose();
-        animator.SetInteger("Action", 2);
-        animator.SetTrigger("GetHitTrigger");
-        animator.SetBool("Stunned", true);
+        if(animator)
+        {
+            animator.SetInteger("Action", 2);
+            animator.SetTrigger("GetHitTrigger");
+            animator.SetBool("Stunned", true);
+        }
         GetComponent<AudioSource>().Play();
     }
 }

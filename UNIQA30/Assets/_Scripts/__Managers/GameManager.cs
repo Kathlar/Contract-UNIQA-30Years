@@ -42,6 +42,8 @@ public class GameManager : Singleton<GameManager>
         countdownText.text = "";
 
         player.StartGame();
+        FollowTransformLerp lerp = FindObjectOfType<FollowTransformLerp>();
+        if (lerp) lerp.DoStart();
     }
 
     public static void Lose()
