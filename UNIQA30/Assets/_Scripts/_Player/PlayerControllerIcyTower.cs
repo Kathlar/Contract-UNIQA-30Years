@@ -15,6 +15,7 @@ public class PlayerControllerIcyTower : PlayerController
 
     public Vector3 velocity;
     private float timeOfLAstJump = -1;
+    bool isJumping;
 
     protected override void Awake()
     {
@@ -32,23 +33,39 @@ public class PlayerControllerIcyTower : PlayerController
         if (isGrounded && Time.timeSinceLevelLoad > timeOfLAstJump + .1f) velocity.y = 0;
         else velocity.y = Mathf.Lerp(velocity.y, Physics.gravity.y, Time.deltaTime * 3);
 
-        float targetXVel = horizontalValue * 11;
+        float targetXVel = horizontalValue * 5;
         if (isGrounded) targetXVel *= 2;
-        velocity.x = Mathf.Lerp(velocity.x, targetXVel, Time.deltaTime * 
-            (isGrounded ? 30 : 12));
+        velocity.x = Mathf.Lerp(velocity.x, targetXVel, Time.deltaTime * 10);
 
-        if (spaceButton && isGrounded)
+        if (spaceButton && isGrounded && !isJumping)
         {
-            velocity.y = 30 + (Mathf.Abs(velocity.x) * 2.2f);
+            isJumping = true;
+            StartCoroutine(Jumping());
             timeOfLAstJump = Time.timeSinceLevelLoad;
         }
 
         controller.Move(velocity * Time.deltaTime);
+
+        if (Physics.CheckSphere(groundPoint.position, .1f, groundMask, QueryTriggerInteraction.Collide) && velocity.y <= 0)
+            timeOfLastGrounded = Time.timeSinceLevelLoad;
+    }
+
+    IEnumerator Jumping()
+    {
+        float timing = 0;
+        do
+        {
+            timing += Time.deltaTime;
+            velocity.y = Mathf.Lerp(velocity.y, 20, Time.deltaTime * 50);
+            yield return null;
+        }
+        while (timing < .22f);
+        isJumping = false;
     }
 
     private void FixedUpdate()
     {
-        if (Physics.CheckSphere(groundPoint.position, .1f, groundMask) && velocity.y <= 0)
+        if (Physics.CheckSphere(groundPoint.position, .1f, groundMask, QueryTriggerInteraction.Collide) && velocity.y <= 0)
             timeOfLastGrounded = Time.timeSinceLevelLoad;
     }
 }

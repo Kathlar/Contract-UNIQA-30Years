@@ -6,7 +6,7 @@ public class RandomX : MonoBehaviour
 {
     protected float maxX;
 
-    private void Start()
+    private void Awake()
     {
         maxX = -transform.localPosition.x;
         Vector3 newPos = transform.localPosition;

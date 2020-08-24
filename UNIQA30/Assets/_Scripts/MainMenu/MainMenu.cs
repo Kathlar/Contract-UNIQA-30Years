@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenu, levelSelectMenu, highScoresMenu;
     public InputField nickText;
     public Text highScoreText;
+    public Dropdown sexDropdown;
 
     private static GameObject Music;
     public GameObject music;
@@ -19,6 +20,9 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         nickText.SetTextWithoutNotify(PlayerPrefs.GetString("PlayerNick"));
+        string currentSex = PlayerPrefs.GetString("PlayerSex");
+        if (currentSex == "Man") sexDropdown.SetValueWithoutNotify(1);
+        else if (currentSex == "Woman") sexDropdown.SetValueWithoutNotify(0);
         if (Music) Destroy(music);
         else Music = music;
     }
@@ -82,6 +86,12 @@ public class MainMenu : MonoBehaviour
     public void OnNickSet()
     {
         PlayerPrefs.SetString("PlayerNick", nickText.text);
+        PlayerPrefs.Save();
+    }
+
+    public void OnSexSet()
+    {
+        PlayerPrefs.SetString("PlayerSex", sexDropdown.value == 0 ? "Woman" : "Man");
         PlayerPrefs.Save();
     }
 }

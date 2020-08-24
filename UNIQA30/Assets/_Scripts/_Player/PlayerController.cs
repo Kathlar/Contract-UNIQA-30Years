@@ -16,10 +16,25 @@ public class PlayerController : MonoBehaviour
     protected bool started;
     protected bool lost = false;
 
+    public GameObject gfxWoman, gfxMan;
+    protected GameObject acutalGFX;
+
     protected virtual void Awake()
     {
         points = GetComponent<PlayerPoints>();
-        animator = GetComponentInChildren<Animator>();
+
+        if(gfxWoman)
+        {
+            bool isWoman = PlayerPrefs.GetString("PlayerSex") == "Woman";
+            gfxWoman.SetActive(isWoman);
+            gfxMan.SetActive(!isWoman);
+            acutalGFX = isWoman ? gfxWoman : gfxMan;
+
+            animator = (isWoman ? gfxWoman : gfxMan).GetComponent<Animator>();
+        }
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     protected virtual void Update()

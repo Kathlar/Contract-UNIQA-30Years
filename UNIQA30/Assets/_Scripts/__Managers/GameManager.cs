@@ -18,7 +18,8 @@ public class GameManager : Singleton<GameManager>
     protected override void AwakeSingleton()
     {
         base.AwakeSingleton();
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerController>(); 
+        Time.timeScale = 1;
     }
 
     private void Start()
